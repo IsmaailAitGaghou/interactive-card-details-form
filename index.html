@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title> Interactive card details form</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+  <div class="container">
+      <div class="right-side">
+        <img src="images/bg-main-desktop.png" alt="" class="img-bg hide-for-mobile">
+        <img src="images/bg-main-mobile.png" alt="" class="img-bg hide-for-desktop">
+
+        <div class="cards">
+          <div class="front-card">
+            <span class="account-number">0000 0000 0000 0000</span>
+            <span class="account-name">Jane Appleseed</span>
+            <p class="account-date"> 00/00 </p>
+            <img src="images/card-logo.svg" alt="" class="img-logo" />
+            <img src="images/bg-card-front.png" alt="">
+          </div>
+          <div class="back-card">
+            <span class="cvc">000</span>
+            <img src="images/bg-card-back.png" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="left-side">
+        <div class="completestate">
+          <div class="gradient">
+            
+          </div>
+          <div class="in-completestate">
+
+            <div class="check"></div>
+            <h1>Thank you!</h1>
+  
+            <p>We've added your card details
+            </p>
+          </div>
+
+          <input type="button" id="btn-Continue" value="Continue">
+          
+        </div>
+        <div class="form-group hidden" id="display">
+          <div class="form-control">
+            <label for="Name">Cardholder Name</label> <br>
+            <input type="text" id="Name" placeholder="e.g. Jane Appleseed">
+            <p class="error name-error"></p>
+          </div>
+          <div class="form-control">
+            <label for="Number">Card Number</label><br>
+            <input type="text" id="Number" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" >
+            <p class="error card-error"></p>
+          </div>
+          <div class="form-control">
+            <table>
+            <tr>
+              <td><label for="Date">Exp. Date (MM/YY)</label></td>
+              <td><label for="CVC">CVC</label><br></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="MDate" placeholder="MM" size="2"  maxlength="2" required>
+                <p class="error MM-error"></p>
+                <input type="text" id="YDate" placeholder="YY" size="2" maxlength="2" required>
+                <p class="error YY-error"></p>
+              </td>
+              <td><input type="text"  id="CVC" placeholder="e.g. 123" size="3" maxlength="3" required>
+                <p class="error cvc-error "></p></td>
+              
+            </tr>
+          </table>
+          </div>
+          <div class="form-control">
+            <input type="button" id="btn-Confirm" value="Confirm">
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
